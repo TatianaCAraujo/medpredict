@@ -1,0 +1,2 @@
+# Bibliotecas utilizadas no projeto MedPredict
+# Este arquivo será atualizado após a finalização do notebook.
