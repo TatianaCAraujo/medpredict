@@ -1,43 +1,249 @@
-# MedPredict
+# 🩺 MedPredict
 
-**Predição de No-Show em consultas médicas com Machine Learning e experiência integrada para o paciente.**
+**Predição de No-Show em consultas médicas utilizando Machine Learning e experiência integrada para o paciente.**
 
-TCC da Turma Fly 2026 - Grupo 5 - Trama
+**TCC da Turma Fly 2026 — Grupo 5 — TRAMA**
 
-`Python` `pandas` `scikit-learn` `Machine Learning` `Gradient Boosting`
+`Python` `pandas` `scikit-learn` `Machine Learning` `Regressão Logística` `Data Science`
 
-## O problema
+---
 
-O não comparecimento a consultas médicas (No-Show) pode gerar desperdício de recursos, ociosidade na agenda e dificultar o acesso de outros pacientes ao atendimento.
+## 🎯 O problema
 
-O MedPredict investiga dados históricos de consultas para identificar padrões associados às faltas e avaliar como Machine Learning pode apoiar ações preventivas, sem substituir a decisão humana.
+O não comparecimento a consultas médicas (**No-Show**) pode gerar desperdício de recursos, ociosidade na agenda e dificultar o acesso de outros pacientes ao atendimento.
 
-Além da análise preditiva, o projeto considera a experiência do paciente no gerenciamento de seus próprios agendamentos.
+O **MedPredict** utiliza dados históricos de consultas para identificar padrões associados às faltas e avaliar como Machine Learning pode apoiar ações preventivas.
 
-## Os dados
+A proposta não é determinar quem irá faltar, mas utilizar o risco estimado pelo modelo como apoio à priorização de ações como confirmação ou reagendamento de consultas.
 
-- **Fonte:** a ser documentada em `dados/FONTE.md`.
-- **Recorte:** será detalhado após a consolidação final da análise.
-- **Amostra no repositório:** será disponibilizada na pasta `dados/`.
-- **Como reproduzir:** consultar `dados/FONTE.md`.
+As decisões e os contatos com pacientes permanecem sob responsabilidade humana.
 
-## O método
+Além da análise preditiva, o projeto contempla uma segunda frente voltada à experiência do paciente, por meio de um MVP para gerenciamento dos próprios agendamentos.
 
-O projeto realizou análise exploratória dos dados, tratamento e limpeza da base, seleção de variáveis e preparação dos dados para treinamento e teste.
+---
 
-Foram comparadas diferentes abordagens, incluindo Baseline, Regressão Logística, Random Forest e Gradient Boosting, além de validação cruzada e avaliação das métricas dos modelos.
+## 💡 Pergunta central
 
-O Gradient Boosting foi selecionado como modelo principal para apresentação e documentação do projeto.
+> É possível prever quais pacientes apresentam maior risco de faltar a uma consulta, permitindo que a clínica atue preventivamente?
 
-## Os resultados
+O problema foi tratado como uma tarefa de **classificação binária**:
 
-Os resultados finais e as principais métricas do modelo serão incluídos nesta seção após a conclusão e validação da análise.
+- `0` → paciente compareceu;
+- `1` → paciente faltou.
 
-## O protótipo
+---
 
-O MedPredict possui duas frentes complementares:
+## 📊 Os dados
+
+O projeto utiliza a base pública **Medical Appointment No Shows**, disponibilizada no Kaggle.
+
+🔗 [Medical Appointment No Shows — Kaggle](https://www.kaggle.com/datasets/joniarroba/noshowappointments)
+
+A base original contém:
+
+- **110.527 registros de consultas**
+- **14 colunas**
+- informações demográficas;
+- características do agendamento;
+- condições de saúde;
+- informação sobre recebimento de SMS;
+- bairro;
+- status de comparecimento.
+
+Na distribuição original do alvo:
+
+- **88.208 consultas (79,8%)** resultaram em comparecimento;
+- **22.319 consultas (20,2%)** resultaram em falta.
+
+Essa diferença entre as classes é importante porque demonstra por que **acurácia isoladamente não é suficiente** para avaliar os modelos.
+
+Um modelo que simplesmente previsse que todos os pacientes compareceriam teria aproximadamente 80% de acurácia, mas seria incapaz de identificar as faltas.
+
+### Dados disponibilizados no repositório
+
+Por questões de organização e reprodutibilidade, o repositório contém uma amostra da base:
+
+`dados/amostra_1000_linhas.csv`
+
+As informações sobre a origem e obtenção da base completa estão documentadas em:
+
+`dados/FONTE.md`
+
+---
+
+## 🔎 Análise exploratória e hipóteses
+
+Durante o desenvolvimento foram investigadas **6 hipóteses** relacionadas ao comportamento de No-Show.
+
+As análises buscaram compreender possíveis relações entre as faltas e características presentes na base, incluindo aspectos como:
+
+- tempo entre agendamento e consulta;
+- faixa etária;
+- recebimento de SMS;
+- localização/bairro;
+- características do paciente;
+- variáveis relacionadas ao agendamento.
+
+As hipóteses foram avaliadas antes da construção dos modelos e ajudaram a orientar o tratamento dos dados e a engenharia de atributos.
+
+O notebook completo contém as análises, visualizações, interpretações e resultados obtidos em cada etapa.
+
+---
+
+## 🧹 Preparação dos dados
+
+Antes do treinamento dos modelos foi realizado um processo de preparação da base, incluindo:
+
+- análise exploratória;
+- identificação de valores inconsistentes;
+- tratamento e limpeza dos registros;
+- conversão e tratamento das datas;
+- remoção de identificadores sem valor preditivo;
+- seleção de variáveis;
+- criação de novas características;
+- preparação das variáveis categóricas;
+- separação entre dados de treino e teste;
+- construção de pipelines de Machine Learning.
+
+Entre as características derivadas utilizadas durante a análise está o **tempo de espera entre o agendamento e a consulta (`DiasEspera`)**.
+
+---
+
+## 🤖 Modelagem
+
+Foram comparadas diferentes abordagens de Machine Learning:
+
+1. **Baseline — prever comparecimento**
+2. **Regressão Logística**
+3. **Árvore de Decisão**
+4. **Random Forest**
+5. **Gradient Boosting**
+
+O baseline foi utilizado como referência para demonstrar a limitação da acurácia em uma base desbalanceada.
+
+Os modelos foram avaliados principalmente considerando sua capacidade de identificar pacientes que realmente faltaram.
+
+### Comparação inicial
+
+| Modelo | Acurácia | Precisão — Falta | Recall — Falta | F1 — Falta |
+|---|---:|---:|---:|---:|
+| Gradient Boosting | 0,578 | 0,303 | 0,840 | **0,446** |
+| Árvore de Decisão | 0,562 | 0,297 | **0,853** | 0,440 |
+| Random Forest | 0,572 | 0,298 | 0,825 | 0,437 |
+| Regressão Logística | **0,654** | **0,308** | 0,576 | 0,402 |
+| Baseline | **0,798** | 0,000 | 0,000 | 0,000 |
+
+O resultado do baseline evidencia a chamada **armadilha da acurácia**: apesar de apresentar aproximadamente 80% de acurácia, ele não identifica nenhuma falta.
+
+---
+
+## 🏆 Modelo final
+
+Embora o **Gradient Boosting** tenha apresentado o melhor F1 na comparação inicial, a etapa final do projeto optou pela **Regressão Logística**.
+
+A decisão considerou dois fatores principais:
+
+- diferença relativamente pequena de desempenho;
+- maior **interpretabilidade** da Regressão Logística.
+
+Os coeficientes do modelo permitem compreender melhor quais características estão associadas ao aumento ou redução do risco estimado de falta.
+
+Essa interpretabilidade é especialmente relevante em um contexto no qual o modelo deve funcionar como **apoio à decisão humana**.
+
+---
+
+## 🎚️ Ajuste do limiar de decisão
+
+O threshold padrão de `0,50` não foi utilizado automaticamente.
+
+Foram avaliados diferentes limiares considerando o equilíbrio entre:
+
+- **Recall** — capacidade de identificar pacientes que realmente faltariam;
+- **Precisão** — proporção dos alertas que correspondem efetivamente a faltas;
+- **F1-score** — equilíbrio entre precisão e recall;
+- impacto operacional dos falsos positivos e falsos negativos.
+
+O limiar selecionado foi:
+
+**Threshold = 0,46**
+
+A lógica considerada foi que uma tentativa adicional de confirmação possui custo operacional menor do que deixar passar uma consulta com alto risco de No-Show.
+
+---
+
+## 🧪 Validação cruzada
+
+Para reduzir o risco de escolher um modelo com bom desempenho apenas em uma divisão específica dos dados, foi utilizada **validação cruzada** durante o treinamento.
+
+Também foi utilizado **GridSearch** para ajuste da Regressão Logística.
+
+Melhor parâmetro encontrado:
+
+`C = 0.01`
+
+F1 obtido na validação cruzada:
+
+**0,406**
+
+Após essa etapa, a avaliação final foi realizada no conjunto de teste.
+
+---
+
+## 📈 Resultado final
+
+Com a **Regressão Logística** e threshold de **0,46**, o modelo apresentou no conjunto de teste:
+
+| Métrica | Resultado |
+|---|---:|
+| Recall | **0,682** |
+| Precisão | **0,291** |
+| F1-score | **0,408** |
+
+No conjunto de teste havia:
+
+- **6.694 faltas reais**
+- **4.566 faltas detectadas pelo modelo**
+- **2.128 faltas não detectadas**
+- **11.125 falsos alertas**
+
+Isso significa que o modelo conseguiu identificar aproximadamente **68% das faltas reais** presentes no conjunto de teste.
+
+O objetivo do MedPredict, portanto, não é prever com certeza o comportamento individual do paciente, mas fornecer uma **priorização de risco** que possa auxiliar ações preventivas.
+
+---
+
+## 🧠 Interpretabilidade
+
+Uma das vantagens da escolha da Regressão Logística é a possibilidade de analisar seus coeficientes.
+
+Entre os resultados observados, o **tempo de espera (`DiasEspera`)** apareceu como uma das características com maior associação ao aumento do risco de falta.
+
+O modelo também permitiu analisar a influência de outras características presentes na base.
+
+Essas relações devem ser interpretadas como **associações encontradas nos dados**, e não como relações causais.
+
+---
+
+## 🧪 Exemplo de aplicação
+
+O notebook também demonstra como o risco pode mudar para pacientes com características semelhantes.
+
+Em um exemplo apresentado:
+
+- paciente com **0 dias de espera** → risco estimado de falta de aproximadamente **43%** → sem alerta;
+- paciente com **25 dias de espera** → risco estimado de falta de aproximadamente **60%** → priorizado para confirmação.
+
+Com threshold de `0,46`, o segundo caso seria sinalizado para uma possível ação preventiva.
+
+---
+
+## 🖥️ Protótipo
+
+O MedPredict possui duas frentes complementares.
 
 ### Machine Learning
+
+A frente preditiva busca:
 
 - analisar dados históricos de consultas;
 - estimar o risco de No-Show;
@@ -54,33 +260,50 @@ O MVP propõe uma experiência centralizada para gerenciamento das consultas, pe
 - cancelar consultas;
 - gerenciar seus compromissos de forma mais simples e centralizada.
 
-O link para o protótipo publicado será incluído após a disponibilização via GitHub Pages.
+Dessa forma, o projeto combina **análise preditiva** e **experiência do usuário** para abordar o problema de No-Show por duas perspectivas complementares.
 
-## Limitações
+---
 
-As limitações identificadas durante a análise serão documentadas nesta seção após a validação final do projeto.
+## ⚠️ Limitações
 
-## O grupo
+O comportamento de comparecimento a uma consulta depende de diversos fatores que não estão disponíveis na base utilizada.
 
-**TRAMA**
+O dataset não informa, por exemplo, todas as circunstâncias externas que podem influenciar uma falta.
 
-- Camila
-- Jacqueline
-- Nelly
-- Renata
-- Suzanne
-- Tatiana
+Por isso:
 
+- o modelo não deve ser interpretado como previsão absoluta do comportamento individual;
+- os resultados representam padrões presentes na base histórica;
+- associações encontradas não significam necessariamente causalidade;
+- falsos positivos e falsos negativos continuam existindo;
+- o modelo deve ser utilizado como ferramenta de apoio e priorização;
+- decisões finais devem permanecer sob responsabilidade humana.
 
+O próprio desempenho obtido demonstra essa limitação: o comportamento humano é influenciado por fatores que uma base histórica limitada não consegue representar completamente.
 
+---
 
+## 📁 Estrutura do repositório
 
-
-Os links profissionais das integrantes serão adicionados posteriormente.
-
-## Como rodar
-
-1. Abra `notebook/01_analise_completa.ipynb` no Google Colab.
-2. Execute as células de cima para baixo.
-3. Consulte `requisitos.txt` para verificar as bibliotecas utilizadas.
-4. Consulte `dados/FONTE.md` para informações sobre a origem e reprodução dos dados.
+```text
+medpredict/
+│
+├── apresentacao/
+│   └── materiais da apresentação do projeto
+│
+├── dados/
+│   ├── FONTE.md
+│   └── amostra_1000_linhas.csv
+│
+├── imagens/
+│   └── imagens e recursos visuais do projeto
+│
+├── notebook/
+│   ├── 01_analise_completa.ipynb
+│   └── README.md
+│
+├── prototipo/
+│   └── README.md
+│
+├── README.md
+└── requisitos.txt
