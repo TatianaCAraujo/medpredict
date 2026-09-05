@@ -4,7 +4,7 @@
 
 **TCC da Turma Fly 2026 — Grupo 5 — TRAMA**
 
-`Python` `pandas` `scikit-learn` `Machine Learning` `Regressão Logística` `Data Science`
+`Python` `pandas` `scikit-learn` `Machine Learning` `Gradient Boosting` `Data Science`
 
 ---
 
@@ -121,7 +121,7 @@ Foram comparadas diferentes abordagens de Machine Learning:
 
 O baseline foi utilizado como referência para demonstrar a limitação da acurácia em uma base desbalanceada.
 
-Os modelos foram avaliados principalmente considerando sua capacidade de identificar pacientes que realmente faltaram.
+Os modelos foram avaliados considerando especialmente o equilíbrio entre precisão e recall para a classe No-Show, representado pelo F1-score, além da capacidade de identificar faltas reais.
 
 ### Comparação inicial
 
@@ -139,101 +139,59 @@ O resultado do baseline evidencia a chamada **armadilha da acurácia**: apesar d
 
 ## 🏆 Modelo final
 
-Embora o **Gradient Boosting** tenha apresentado o melhor F1 na comparação inicial, a etapa final do projeto optou pela **Regressão Logística**.
+Após a comparação entre os modelos avaliados, o **Gradient Boosting** foi selecionado como modelo final do MedPredict.
 
-A decisão considerou dois fatores principais:
+Na comparação realizada, o Gradient Boosting apresentou o **melhor F1-score para a classe No-Show, de 0,446**, mantendo também um **recall elevado de 0,840**.
 
-- diferença relativamente pequena de desempenho;
-- maior **interpretabilidade** da Regressão Logística.
+A escolha considerou o equilíbrio entre precisão e recall, representado pelo F1-score, sem perder de vista a importância de identificar o maior número possível de faltas reais.
 
-Os coeficientes do modelo permitem compreender melhor quais características estão associadas ao aumento ou redução do risco estimado de falta.
+No contexto do MedPredict, essa característica é especialmente importante porque o objetivo não é apenas obter uma alta acurácia geral, mas identificar consultas com risco de No-Show que possam ser priorizadas para ações preventivas.
 
-Essa interpretabilidade é especialmente relevante em um contexto no qual o modelo deve funcionar como **apoio à decisão humana**.
+O modelo deve ser utilizado como ferramenta de apoio à priorização, mantendo as decisões e os contatos com pacientes sob responsabilidade humana.
 
----
-
-## 🎚️ Ajuste do limiar de decisão
-
-O threshold padrão de `0,50` não foi utilizado automaticamente.
-
-Foram avaliados diferentes limiares considerando o equilíbrio entre:
-
-- **Recall** — capacidade de identificar pacientes que realmente faltariam;
-- **Precisão** — proporção dos alertas que correspondem efetivamente a faltas;
-- **F1-score** — equilíbrio entre precisão e recall;
-- impacto operacional dos falsos positivos e falsos negativos.
-
-O limiar selecionado foi:
-
-**Threshold = 0,46**
-
-A lógica considerada foi que uma tentativa adicional de confirmação possui custo operacional menor do que deixar passar uma consulta com alto risco de No-Show.
 
 ---
 
 ## 🧪 Validação cruzada
 
-Para reduzir o risco de escolher um modelo com bom desempenho apenas em uma divisão específica dos dados, foi utilizada **validação cruzada** durante o treinamento.
+Para reduzir o risco de avaliar os modelos com base apenas em uma divisão específica dos dados, foi utilizada **validação cruzada** durante o processo de modelagem.
 
-Também foi utilizado **GridSearch** para ajuste da Regressão Logística.
+Essa etapa permitiu observar a estabilidade do desempenho dos modelos em diferentes divisões dos dados, complementando a avaliação realizada no conjunto de teste.
 
-Melhor parâmetro encontrado:
-
-`C = 0.01`
-
-F1 obtido na validação cruzada:
-
-**0,406**
-
-Após essa etapa, a avaliação final foi realizada no conjunto de teste.
+A seleção final do **Gradient Boosting** considerou os resultados da comparação entre os modelos, com destaque para o melhor F1-score obtido para a classe No-Show.
 
 ---
 
 ## 📈 Resultado final
 
-Com a **Regressão Logística** e threshold de **0,46**, o modelo apresentou no conjunto de teste:
+Na comparação dos modelos, o **Gradient Boosting** apresentou o melhor F1-score para identificação de No-Show.
 
 | Métrica | Resultado |
 |---|---:|
-| Recall | **0,682** |
-| Precisão | **0,291** |
-| F1-score | **0,408** |
+| Acurácia | 0,578 |
+| Precisão — No-Show | 0,303 |
+| Recall — No-Show | **0,840** |
+| F1-score — No-Show | **0,446** |
 
-No conjunto de teste havia:
+O recall de **0,840** indica que, no conjunto avaliado, o modelo identificou aproximadamente **84% das faltas reais**.
 
-- **6.694 faltas reais**
-- **4.566 faltas detectadas pelo modelo**
-- **2.128 faltas não detectadas**
-- **11.125 falsos alertas**
+Ao mesmo tempo, a precisão de 0,303 demonstra que parte dos alertas gerados corresponde a pacientes que compareceriam à consulta.
 
-Isso significa que o modelo conseguiu identificar aproximadamente **68% das faltas reais** presentes no conjunto de teste.
+Esse comportamento representa um trade-off importante do projeto: aumentar a capacidade de encontrar possíveis faltas também pode aumentar a quantidade de ações preventivas realizadas.
 
-O objetivo do MedPredict, portanto, não é prever com certeza o comportamento individual do paciente, mas fornecer uma **priorização de risco** que possa auxiliar ações preventivas.
+Por isso, o MedPredict deve ser utilizado como ferramenta de **priorização de risco e apoio à decisão**, e não como previsão determinística do comportamento do paciente.
 
 ---
 
-## 🧠 Interpretabilidade
+## 🧠 Interpretação dos resultados
 
-Uma das vantagens da escolha da Regressão Logística é a possibilidade de analisar seus coeficientes.
+A análise dos resultados não se limita ao desempenho do modelo.
 
-Entre os resultados observados, o **tempo de espera (`DiasEspera`)** apareceu como uma das características com maior associação ao aumento do risco de falta.
+Durante a exploração dos dados, foram investigadas características associadas ao comportamento de No-Show, permitindo compreender melhor os padrões presentes na base.
 
-O modelo também permitiu analisar a influência de outras características presentes na base.
+Entre os resultados observados, o **tempo de espera entre o agendamento e a consulta (`DiasEspera`)** apresentou associação relevante com o risco de falta.
 
 Essas relações devem ser interpretadas como **associações encontradas nos dados**, e não como relações causais.
-
----
-
-## 🧪 Exemplo de aplicação
-
-O notebook também demonstra como o risco pode mudar para pacientes com características semelhantes.
-
-Em um exemplo apresentado:
-
-- paciente com **0 dias de espera** → risco estimado de falta de aproximadamente **43%** → sem alerta;
-- paciente com **25 dias de espera** → risco estimado de falta de aproximadamente **60%** → priorizado para confirmação.
-
-Com threshold de `0,46`, o segundo caso seria sinalizado para uma possível ação preventiva.
 
 ---
 
