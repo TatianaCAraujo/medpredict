@@ -9,7 +9,7 @@ Aplicação acadêmica do Grupo TRAMA para demonstrar como o risco estimado de N
 O MVP MedPredict está disponível para demonstração online.
 
 **MedPredict — experiência do paciente:**
-https://medpredict-d1bydmxkt-med-predict.vercel.app
+https://medpredict-eosin.vercel.app
 
 Este protótipo representa a frente de experiência do paciente do projeto MedPredict e permite demonstrar funcionalidades de gerenciamento da jornada de consultas. Utiliza dados fictícios e demonstrativos para fins acadêmicos e não representa um sistema de saúde em produção.
 
