@@ -4,6 +4,15 @@ Aplicação acadêmica do Grupo TRAMA para demonstrar como o risco estimado de N
 
 > Ambiente demonstrativo: todos os nomes, contatos, consultas, probabilidades e indicadores são fictícios. O aplicativo não utiliza dados pessoais reais nem se conecta a sistemas de saúde ou canais de comunicação externos.
 
+## Demo online
+
+O MVP MedPredict está disponível para demonstração online.
+
+**MedPredict — experiência do paciente:**
+https://medpredict-d1bydmxkt-med-predict.vercel.app
+
+Este protótipo representa a frente de experiência do paciente do projeto MedPredict e permite demonstrar funcionalidades de gerenciamento da jornada de consultas. Utiliza dados fictícios e demonstrativos para fins acadêmicos e não representa um sistema de saúde em produção.
+
 ## Como executar
 
 Pré-requisito: Node.js 20 ou superior.
