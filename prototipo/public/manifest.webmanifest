@@ -1,0 +1,10 @@
+{
+  "name": "MedPredict - Paciente",
+  "short_name": "MedPredict",
+  "description": "MVP acadêmico do Grupo TRAMA",
+  "start_url": "/paciente",
+  "display": "standalone",
+  "background_color": "#f4f8f7",
+  "theme_color": "#0b6e69",
+  "icons": [{ "src": "/medpredict.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

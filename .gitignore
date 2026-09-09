@@ -1,0 +1,5 @@
+prototipo/node_modules/
+prototipo/dist/
+prototipo/test-results/
+*.tsbuildinfo
+prototipo/demo/output/
