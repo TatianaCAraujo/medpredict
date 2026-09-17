@@ -338,6 +338,9 @@ medpredict/
 │   │   ├── playwright.config.ts
 │   │   └── README.md
 │   │
+│   ├── prototipo-nely/
+│   │   └── README.md
+│   │
 │   ├── public/
 │   │   ├── demo/
 │   │   │   ├── README.md
@@ -356,3 +359,4 @@ medpredict/
 ├── .gitignore
 ├── README.md
 └── requisitos.txt
+```
