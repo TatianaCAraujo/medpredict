@@ -8,6 +8,52 @@
 
 ---
 
+## 🚀 Acesse o MedPredict
+
+O MedPredict possui um **MVP navegável** e uma **demonstração guiada do fluxo da solução**.
+
+O ambiente publicado é demonstrativo, utiliza **dados fictícios para fins acadêmicos** e apresenta a integração entre a experiência do paciente e o apoio à atuação da equipe da unidade de saúde.
+
+🌐 **[Acessar o MVP online](https://medpredict-eosin.vercel.app)**
+
+🎬 **[Assistir à demonstração do MedPredict](https://medpredict-eosin.vercel.app/demo/medpredict-demo-final-v3.mp4)**
+
+### O que a demonstração apresenta
+
+- acesso e jornada do paciente;
+- visualização e gerenciamento das consultas;
+- confirmação e cancelamento de agendamentos;
+- estimativa de risco de No-Show para apoio à priorização;
+- Agenda Inteligente para acompanhamento das consultas;
+- atuação da equipe administrativa;
+- recuperação de vagas após cancelamentos;
+- integração entre as ações realizadas pelo paciente e o acompanhamento pela equipe.
+
+> O risco apresentado pelo MedPredict é uma estimativa utilizada como apoio à priorização. O modelo não determina se um paciente irá faltar e as decisões permanecem sob responsabilidade humana.
+
+---
+
+## 👩‍💻 Equipe e contribuições
+
+O **MedPredict** foi desenvolvido como Trabalho de Conclusão de Curso pela equipe **Grupo TRAMA**, formada por:
+
+- Camila
+- Jacqueline
+- Nelly
+- Renata
+- Suzanne
+- Tatiana
+
+O projeto foi construído de forma colaborativa, envolvendo pesquisa, análise de dados, exploração de hipóteses, Machine Learning, documentação, apresentação e definição da solução.
+
+### Concepção e desenvolvimento do protótipo
+
+A **ideia, concepção e desenvolvimento completo do protótipo navegável do MedPredict** foram realizados por **Tatiana Araujo**, incluindo a construção da experiência integrada entre paciente e equipe administrativa e a evolução do MVP utilizado na demonstração do projeto.
+
+O protótipo foi desenvolvido como uma das frentes do trabalho do Grupo TRAMA e utiliza os resultados do estudo de Machine Learning desenvolvido no projeto como base para demonstrar, na prática, como o risco estimado pode apoiar a priorização de ações.
+
+---
+
 ## 🎯 O problema
 
 O não comparecimento a consultas médicas (**No-Show**) pode gerar desperdício de recursos, ociosidade na agenda e dificultar o acesso de outros pacientes ao atendimento.
@@ -261,7 +307,30 @@ medpredict/
 │   └── README.md
 │
 ├── prototipo/
-│   └── README.md
+│   ├── demo/
+│   │   ├── output/
+│   │   │   ├── README.md
+│   │   │   └── medpredict-demo-final-v3.webm
+│   │   ├── demo-utils.ts
+│   │   ├── medpredict-demo.playwright.ts
+│   │   ├── playwright.config.ts
+│   │   └── README.md
+│   │
+│   ├── public/
+│   │   ├── demo/
+│   │   │   ├── README.md
+│   │   │   └── medpredict-demo-final-v3.mp4
+│   │   ├── manifest.webmanifest
+│   │   ├── medpredict.svg
+│   │   └── sw.js
+│   │
+│   ├── server/
+│   ├── src/
+│   ├── README.md
+│   ├── index.html
+│   ├── package.json
+│   └── package-lock.json
 │
+├── .gitignore
 ├── README.md
 └── requisitos.txt
