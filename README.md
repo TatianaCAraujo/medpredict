@@ -84,7 +84,7 @@ Além do protótipo publicado no Manus, **Nely também preparou a demonstração
 
 A demo apresenta a proposta de funcionamento da solução construída por ela e representa uma das formas exploradas pelo Grupo TRAMA para transformar os resultados do projeto em uma aplicação prática.
 
-▶️ **[Assistir à demonstração preparada por Nely](prototipo/prototipo-nely/demo/medpredict-demo-nely.mp4)**
+▶️ **[Assistir à demonstração preparada por Nely](https://tatianacaraujo.github.io/medpredict/demo-nely/)**
 
 #### 🛠️ Desenvolvimento
 
