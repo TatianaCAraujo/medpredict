@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MedPredict — Demos apresentadas no TCC</title>
+  <title>MedPredict — Protótipos e demos do TCC</title>
 
   <style>
     body {
@@ -16,7 +16,7 @@
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1080px;
       margin: 0 auto;
     }
 
@@ -38,8 +38,37 @@
       margin-top: 0;
     }
 
+    h3 {
+      color: #244b6b;
+    }
+
     p {
       line-height: 1.6;
+    }
+
+    .tecnologias-projeto {
+      margin-top: 24px;
+      padding: 18px;
+      background: #eef4f8;
+      border-radius: 10px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 11px;
+      border-radius: 20px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      font-size: 14px;
+      font-weight: bold;
+      color: #244b6b;
     }
 
     .prototipos {
@@ -53,6 +82,17 @@
       padding: 30px;
       border-radius: 16px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    }
+
+    .stack {
+      margin-top: 22px;
+      padding: 16px;
+      background: #f7f9fb;
+      border-radius: 10px;
+    }
+
+    .stack p {
+      margin: 6px 0;
     }
 
     .acoes {
@@ -89,10 +129,14 @@
 
     .rodape {
       margin-top: 28px;
-      padding: 20px;
-      background: #eef4f8;
-      border-radius: 12px;
-      line-height: 1.6;
+      padding: 24px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    }
+
+    .github {
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -103,7 +147,7 @@
 
     <section class="cabecalho">
 
-      <h1>MedPredict — Demos apresentadas no TCC</h1>
+      <h1>MedPredict — Protótipos e demos apresentados no TCC</h1>
 
       <p>
         O <strong>MedPredict</strong> foi desenvolvido pelo Grupo TRAMA
@@ -121,6 +165,21 @@
         <strong>As duas demonstrações foram apresentadas durante o TCC.</strong>
       </p>
 
+      <div class="tecnologias-projeto">
+
+        <strong>Tecnologias utilizadas na frente de Machine Learning</strong>
+
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">pandas</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">Gradient Boosting</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Data Science</span>
+        </div>
+
+      </div>
+
     </section>
 
     <section class="prototipos">
@@ -130,10 +189,22 @@
         <h2>Protótipo — Tatiana Araujo</h2>
 
         <p>
-          Protótipo navegável integrado desenvolvido por Tatiana Araujo,
-          conectando a jornada do paciente, estimativa de risco,
-          priorização da equipe, Agenda Inteligente e recuperação de vagas.
+          Protótipo navegável integrado idealizado e desenvolvido por
+          <strong>Tatiana Araujo</strong>, conectando a jornada do paciente,
+          estimativa de risco, priorização da equipe, Agenda Inteligente
+          e recuperação de vagas.
         </p>
+
+        <div class="stack">
+
+          <h3>Tecnologias e ferramentas</h3>
+
+          <p><strong>Frontend:</strong> React e TypeScript</p>
+          <p><strong>Build e desenvolvimento:</strong> Vite</p>
+          <p><strong>Automação da demonstração:</strong> Playwright</p>
+          <p><strong>Publicação do MVP:</strong> Vercel</p>
+
+        </div>
 
         <div class="acoes">
 
@@ -164,10 +235,18 @@
         <h2>Protótipo — Nely</h2>
 
         <p>
-          Segunda proposta de aplicação do MedPredict, desenvolvida por Nely
-          utilizando o Manus durante o processo de aprendizagem e
+          Segunda proposta de aplicação do MedPredict, desenvolvida por
+          <strong>Nely</strong> durante o processo de aprendizagem e
           experimentação do projeto.
         </p>
+
+        <div class="stack">
+
+          <h3>Plataforma de desenvolvimento</h3>
+
+          <p><strong>Plataforma utilizada:</strong> Manus</p>
+
+        </div>
 
         <div class="acoes">
 
@@ -193,11 +272,26 @@
 
     </section>
 
-    <div class="rodape">
+    <section class="rodape">
+
       <strong>Projeto acadêmico:</strong> MedPredict<br>
       <strong>Grupo:</strong> TRAMA<br>
       <strong>Formação:</strong> Mulheres in Tech 2026
-    </div>
+
+      <div class="github">
+
+        <a
+          class="botao destaque"
+          href="https://github.com/TatianaCAraujo/medpredict"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          💻 Ver projeto completo no GitHub
+        </a>
+
+      </div>
+
+    </section>
 
   </main>
 
