@@ -39,18 +39,40 @@ O **MedPredict** foi desenvolvido como Trabalho de Conclusão de Curso pela equi
 
 - Camila
 - Jacqueline
-- Nelly
+- Nely
 - Renata
 - Suzanne
 - Tatiana
 
-O projeto foi construído de forma colaborativa, envolvendo pesquisa, análise de dados, exploração de hipóteses, Machine Learning, documentação, apresentação e definição da solução.
+O projeto foi construído de forma colaborativa, envolvendo pesquisa, análise de dados, exploração de hipóteses, Machine Learning, documentação, apresentação, definição da solução e experimentação de diferentes formas de transformar os resultados em aplicações práticas.
 
-### Concepção e desenvolvimento do protótipo
+---
 
-A **ideia, concepção e desenvolvimento completo do protótipo navegável do MedPredict** foram realizados por **Tatiana Araujo**, incluindo a construção da experiência integrada entre paciente e equipe administrativa e a evolução do MVP utilizado na demonstração do projeto.
+## 🧩 Protótipos desenvolvidos
 
-O protótipo foi desenvolvido como uma das frentes do trabalho do Grupo TRAMA e utiliza os resultados do estudo de Machine Learning desenvolvido no projeto como base para demonstrar, na prática, como o risco estimado pode apoiar a priorização de ações.
+Durante o desenvolvimento do MedPredict, também exploramos diferentes formas de transformar os resultados do projeto em aplicações práticas. As duas propostas foram desenvolvidas com a mesma finalidade: aproximar os resultados da análise e do Machine Learning de uma solução que pudesse apoiar o enfrentamento do No-Show.
+
+### Protótipo navegável — Tatiana Araujo
+
+A **ideia, concepção e desenvolvimento completo do protótipo navegável integrado do MedPredict** foram realizados por **Tatiana Araujo**.
+
+A solução apresenta a jornada do paciente e da equipe administrativa, incluindo confirmação e cancelamento de consultas, estimativa de risco de No-Show, priorização de contatos, Agenda Inteligente e recuperação de vagas.
+
+O desenvolvimento desse protótipo fez parte do processo de aprendizagem do projeto e permitiu aplicar, na prática, conceitos de produto, experiência do usuário, desenvolvimento de soluções e integração com os resultados de Machine Learning.
+
+🌐 [Acessar o MVP](https://medpredict-eosin.vercel.app)
+
+🎬 [Assistir à demonstração](https://medpredict-eosin.vercel.app/demo/medpredict-demo-final-v3.mp4)
+
+### Protótipo desenvolvido por Nely
+
+Como parte do mesmo processo de aprendizagem e experimentação, **Nely** desenvolveu uma segunda proposta de aplicação do MedPredict utilizando o Manus.
+
+A solução representa outra abordagem para transformar a proposta do projeto em uma experiência prática, mantendo a mesma finalidade de apoiar o enfrentamento do No-Show.
+
+🌐 [Acessar o protótipo desenvolvido por Nely](https://medpredict-zanacnc9.manus.space)
+
+> Os protótipos representam diferentes abordagens de implementação desenvolvidas durante o processo de aprendizagem do Grupo TRAMA.
 
 ---
 
