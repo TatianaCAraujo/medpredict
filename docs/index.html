@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MedPredict — Protótipos e demos do TCC</title>
+  <title>MedPredict — MVPs e demos apresentados no TCC</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background: #f7f9fb;
@@ -31,6 +35,7 @@
     h1 {
       margin-top: 0;
       color: #16324f;
+      line-height: 1.2;
     }
 
     h2 {
@@ -40,6 +45,7 @@
 
     h3 {
       color: #244b6b;
+      margin-top: 0;
     }
 
     p {
@@ -47,22 +53,26 @@
     }
 
     .tecnologias-projeto {
-      margin-top: 24px;
-      padding: 18px;
+      margin-top: 26px;
+      padding: 20px;
       background: #eef4f8;
-      border-radius: 10px;
+      border-radius: 12px;
+    }
+
+    .tecnologias-projeto strong {
+      color: #16324f;
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 12px;
+      margin-top: 14px;
     }
 
     .tag {
       display: inline-block;
-      padding: 7px 11px;
+      padding: 7px 12px;
       border-radius: 20px;
       background: #ffffff;
       border: 1px solid #cbd5e1;
@@ -75,6 +85,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
+      align-items: stretch;
     }
 
     .card {
@@ -82,24 +93,31 @@
       padding: 30px;
       border-radius: 16px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .descricao {
+      flex-grow: 0;
     }
 
     .stack {
       margin-top: 22px;
-      padding: 16px;
+      padding: 18px;
       background: #f7f9fb;
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     .stack p {
-      margin: 6px 0;
+      margin: 8px 0;
     }
 
     .acoes {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      margin-top: 24px;
+      margin-top: auto;
+      padding-top: 28px;
     }
 
     .botao {
@@ -112,6 +130,7 @@
       border: 1px solid #244b6b;
       color: #244b6b;
       background: #ffffff;
+      transition: 0.2s;
     }
 
     .botao:hover {
@@ -129,14 +148,38 @@
 
     .rodape {
       margin-top: 28px;
-      padding: 24px;
+      padding: 26px;
       background: #ffffff;
       border-radius: 16px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
     }
 
+    .dados-projeto {
+      line-height: 1.7;
+    }
+
     .github {
-      margin-top: 20px;
+      margin-top: 22px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 20px 12px;
+      }
+
+      .cabecalho,
+      .card,
+      .rodape {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 23px;
+      }
     }
   </style>
 </head>
@@ -147,22 +190,23 @@
 
     <section class="cabecalho">
 
-      <h1>MedPredict — Protótipos e demos apresentados no TCC</h1>
+      <h1>MedPredict — MVPs e demos apresentados no TCC</h1>
 
       <p>
-        O <strong>MedPredict</strong> foi desenvolvido pelo Grupo TRAMA
-        como Trabalho de Conclusão de Curso da formação Mulheres in Tech 2026.
+        O <strong>MedPredict</strong> foi desenvolvido pelo
+        <strong>Grupo TRAMA</strong> como Trabalho de Conclusão de Curso
+        da formação Mulheres in Tech 2026.
       </p>
 
       <p>
-        Durante o projeto, foram desenvolvidas duas propostas de protótipo
+        Durante o projeto, foram desenvolvidos <strong>dois MVPs</strong>
         com a mesma finalidade: transformar os resultados da análise e do
         Machine Learning em aplicações práticas de apoio ao enfrentamento
         do No-Show em consultas médicas.
       </p>
 
       <p>
-        <strong>As duas demonstrações foram apresentadas durante o TCC.</strong>
+        <strong>Os dois MVPs e suas demonstrações foram apresentados durante o TCC.</strong>
       </p>
 
       <div class="tecnologias-projeto">
@@ -186,23 +230,27 @@
 
       <article class="card">
 
-        <h2>Protótipo — Tatiana Araujo</h2>
+        <div class="descricao">
 
-        <p>
-          Protótipo navegável integrado idealizado e desenvolvido por
-          <strong>Tatiana Araujo</strong>, conectando a jornada do paciente,
-          estimativa de risco, priorização da equipe, Agenda Inteligente
-          e recuperação de vagas.
-        </p>
+          <h2>MVP — Tatiana Araujo</h2>
 
-        <div class="stack">
+          <p>
+            MVP navegável integrado idealizado e desenvolvido por
+            <strong>Tatiana Araujo</strong>, conectando a jornada do paciente,
+            estimativa de risco, priorização da equipe, Agenda Inteligente
+            e recuperação de vagas.
+          </p>
 
-          <h3>Tecnologias e ferramentas</h3>
+          <div class="stack">
 
-          <p><strong>Frontend:</strong> React e TypeScript</p>
-          <p><strong>Build e desenvolvimento:</strong> Vite</p>
-          <p><strong>Automação da demonstração:</strong> Playwright</p>
-          <p><strong>Publicação do MVP:</strong> Vercel</p>
+            <h3>Tecnologias e ferramentas</h3>
+
+            <p><strong>Frontend:</strong> React e TypeScript</p>
+            <p><strong>Build e desenvolvimento:</strong> Vite</p>
+            <p><strong>Automação da demonstração:</strong> Playwright</p>
+            <p><strong>Publicação do MVP:</strong> Vercel</p>
+
+          </div>
 
         </div>
 
@@ -232,19 +280,24 @@
 
       <article class="card">
 
-        <h2>Protótipo — Nely</h2>
+        <div class="descricao">
 
-        <p>
-          Segunda proposta de aplicação do MedPredict, desenvolvida por
-          <strong>Nely</strong> durante o processo de aprendizagem e
-          experimentação do projeto.
-        </p>
+          <h2>MVP — Nely</h2>
 
-        <div class="stack">
+          <p>
+            MVP do MedPredict desenvolvido por <strong>Nely</strong>
+            durante o processo de aprendizagem e experimentação do projeto,
+            utilizando o Manus como plataforma de desenvolvimento.
+          </p>
 
-          <h3>Plataforma de desenvolvimento</h3>
+          <div class="stack">
 
-          <p><strong>Plataforma utilizada:</strong> Manus</p>
+            <h3>Tecnologias e ferramentas</h3>
+
+            <p><strong>Desenvolvimento:</strong> Manus</p>
+            <p><strong>Publicação do MVP:</strong> Manus</p>
+
+          </div>
 
         </div>
 
@@ -256,7 +309,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            🌐 Acessar o protótipo no Manus
+            🌐 Acessar o MVP
           </a>
 
           <a
@@ -274,9 +327,19 @@
 
     <section class="rodape">
 
-      <strong>Projeto acadêmico:</strong> MedPredict<br>
-      <strong>Grupo:</strong> TRAMA<br>
-      <strong>Formação:</strong> Mulheres in Tech 2026
+      <div class="dados-projeto">
+
+        <strong>Projeto acadêmico:</strong> MedPredict<br>
+        <strong>Grupo:</strong> TRAMA<br>
+        <strong>Formação:</strong> Mulheres in Tech 2026
+
+      </div>
+
+      <!--
+        Próxima etapa:
+        inserir aqui os nomes das integrantes do Grupo TRAMA
+        com links para os respectivos perfis do LinkedIn.
+      -->
 
       <div class="github">
 
