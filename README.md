@@ -10,26 +10,23 @@
 
 ## 🚀 Acesse o MedPredict
 
-O MedPredict possui um **MVP navegável** e uma **demonstração guiada do fluxo da solução**.
+O MedPredict possui **duas propostas de protótipo**, desenvolvidas durante o processo de aprendizagem do Grupo TRAMA e apresentadas no TCC.
 
-O ambiente publicado é demonstrativo, utiliza **dados fictícios para fins acadêmicos** e apresenta a integração entre a experiência do paciente e o apoio à atuação da equipe da unidade de saúde.
+🚀 **[Conhecer os protótipos e demos apresentados no TCC](https://tatianacaraujo.github.io/medpredict/)**
 
-🌐 **[Acessar o MVP online](https://medpredict-eosin.vercel.app)**
+### Protótipo — Tatiana Araujo
 
-🎬 **[Assistir à demonstração do MedPredict](https://medpredict-eosin.vercel.app/demo/medpredict-demo-final-v3.mp4)**
+🌐 **[Acessar o MVP](https://medpredict-eosin.vercel.app)**
 
-### O que a demonstração apresenta
+🎬 **[Assistir à demonstração apresentada no TCC](https://medpredict-eosin.vercel.app/demo/medpredict-demo-final-v3.mp4)**
 
-- acesso e jornada do paciente;
-- visualização e gerenciamento das consultas;
-- confirmação e cancelamento de agendamentos;
-- estimativa de risco de No-Show para apoio à priorização;
-- Agenda Inteligente para acompanhamento das consultas;
-- atuação da equipe administrativa;
-- recuperação de vagas após cancelamentos;
-- integração entre as ações realizadas pelo paciente e o acompanhamento pela equipe.
+### Protótipo — Nely
 
-> O risco apresentado pelo MedPredict é uma estimativa utilizada como apoio à priorização. O modelo não determina se um paciente irá faltar e as decisões permanecem sob responsabilidade humana.
+🌐 **[Acessar o protótipo no Manus](https://medpredict-zanacnc9.manus.space)**
+
+🎬 **[Assistir à demonstração apresentada no TCC](https://tatianacaraujo.github.io/medpredict/demo-nely/)**
+
+> Os protótipos representam diferentes abordagens de implementação desenvolvidas a partir do mesmo projeto de análise e Machine Learning para apoio ao enfrentamento do No-Show.
 
 ---
 
