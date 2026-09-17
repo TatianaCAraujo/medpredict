@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MedPredict — Protótipo Nely</title>
+  <title>MedPredict — Demos apresentadas no TCC</title>
 
   <style>
     body {
@@ -16,12 +16,16 @@
     }
 
     .container {
-      max-width: 850px;
+      max-width: 1000px;
       margin: 0 auto;
+    }
+
+    .cabecalho {
       background: #ffffff;
-      padding: 40px;
+      padding: 36px;
       border-radius: 16px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      margin-bottom: 24px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
     }
 
     h1 {
@@ -31,26 +35,40 @@
 
     h2 {
       color: #244b6b;
-      margin-top: 35px;
+      margin-top: 0;
     }
 
     p {
       line-height: 1.6;
     }
 
+    .prototipos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    }
+
     .acoes {
       display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 30px;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
     }
 
     .botao {
-      display: inline-block;
-      padding: 14px 20px;
+      display: block;
+      padding: 14px 18px;
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
+      text-align: center;
       border: 1px solid #244b6b;
       color: #244b6b;
       background: #ffffff;
@@ -69,12 +87,12 @@
       background: #183a55;
     }
 
-    .observacao {
-      margin-top: 35px;
-      padding: 16px;
-      background: #f2f6f9;
-      border-left: 4px solid #244b6b;
-      border-radius: 6px;
+    .rodape {
+      margin-top: 28px;
+      padding: 20px;
+      background: #eef4f8;
+      border-radius: 12px;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -83,47 +101,102 @@
 
   <main class="container">
 
-    <h1>MedPredict — Protótipo desenvolvido por Nely</h1>
+    <section class="cabecalho">
 
-    <p>
-      Esta página reúne o protótipo e a demonstração desenvolvidos por
-      <strong>Nely</strong> como parte do projeto acadêmico
-      <strong>MedPredict</strong>, do Grupo TRAMA.
-    </p>
+      <h1>MedPredict — Demos apresentadas no TCC</h1>
 
-    <p>
-      A proposta foi desenvolvida durante o processo de aprendizagem e
-      experimentação do projeto, buscando transformar os resultados da análise
-      e do Machine Learning em uma aplicação prática voltada ao enfrentamento
-      do No-Show em consultas médicas.
-    </p>
+      <p>
+        O <strong>MedPredict</strong> foi desenvolvido pelo Grupo TRAMA
+        como Trabalho de Conclusão de Curso da formação Mulheres in Tech 2026.
+      </p>
 
-    <h2>Conheça a solução</h2>
+      <p>
+        Durante o projeto, foram desenvolvidas duas propostas de protótipo
+        com a mesma finalidade: transformar os resultados da análise e do
+        Machine Learning em aplicações práticas de apoio ao enfrentamento
+        do No-Show em consultas médicas.
+      </p>
 
-    <div class="acoes">
+      <p>
+        <strong>As duas demonstrações foram apresentadas durante o TCC.</strong>
+      </p>
 
-      <a
-        class="botao destaque"
-        href="https://medpredict-zanacnc9.manus.space"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        🌐 Acessar o protótipo no Manus
-      </a>
+    </section>
 
-      <a
-        class="botao"
-        href="demo-nely/"
-      >
-        🎬 Assistir à demonstração apresentada no TCC
-      </a>
+    <section class="prototipos">
 
-    </div>
+      <article class="card">
 
-    <div class="observacao">
+        <h2>Protótipo — Tatiana Araujo</h2>
+
+        <p>
+          Protótipo navegável integrado desenvolvido por Tatiana Araujo,
+          conectando a jornada do paciente, estimativa de risco,
+          priorização da equipe, Agenda Inteligente e recuperação de vagas.
+        </p>
+
+        <div class="acoes">
+
+          <a
+            class="botao destaque"
+            href="https://medpredict-eosin.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🌐 Acessar o MVP
+          </a>
+
+          <a
+            class="botao"
+            href="https://medpredict-eosin.vercel.app/demo/medpredict-demo-final-v3.mp4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🎬 Assistir à demo apresentada no TCC
+          </a>
+
+        </div>
+
+      </article>
+
+      <article class="card">
+
+        <h2>Protótipo — Nely</h2>
+
+        <p>
+          Segunda proposta de aplicação do MedPredict, desenvolvida por Nely
+          utilizando o Manus durante o processo de aprendizagem e
+          experimentação do projeto.
+        </p>
+
+        <div class="acoes">
+
+          <a
+            class="botao destaque"
+            href="https://medpredict-zanacnc9.manus.space"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🌐 Acessar o protótipo no Manus
+          </a>
+
+          <a
+            class="botao"
+            href="demo-nely/"
+          >
+            🎬 Assistir à demo apresentada no TCC
+          </a>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <div class="rodape">
       <strong>Projeto acadêmico:</strong> MedPredict<br>
       <strong>Grupo:</strong> TRAMA<br>
-      <strong>Autoria deste protótipo e demonstração:</strong> Nely
+      <strong>Formação:</strong> Mulheres in Tech 2026
     </div>
 
   </main>
