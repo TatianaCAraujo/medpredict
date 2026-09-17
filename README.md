@@ -50,7 +50,9 @@ O projeto foi construído de forma colaborativa, envolvendo pesquisa, análise d
 
 ## 🧩 Protótipos desenvolvidos
 
-Durante o desenvolvimento do MedPredict, também exploramos diferentes formas de transformar os resultados do projeto em aplicações práticas. As duas propostas foram desenvolvidas com a mesma finalidade: aproximar os resultados da análise e do Machine Learning de uma solução que pudesse apoiar o enfrentamento do No-Show.
+Durante o desenvolvimento do MedPredict, também exploramos diferentes formas de transformar os resultados do projeto em aplicações práticas.
+
+As duas propostas foram desenvolvidas com a mesma finalidade: aproximar os resultados da análise e do Machine Learning de uma solução que pudesse apoiar o enfrentamento do No-Show.
 
 ### Protótipo navegável — Tatiana Araujo
 
@@ -60,17 +62,38 @@ A solução apresenta a jornada do paciente e da equipe administrativa, incluind
 
 O desenvolvimento desse protótipo fez parte do processo de aprendizagem do projeto e permitiu aplicar, na prática, conceitos de produto, experiência do usuário, desenvolvimento de soluções e integração com os resultados de Machine Learning.
 
-🌐 [Acessar o MVP](https://medpredict-eosin.vercel.app)
+🌐 **[Acessar o MVP](https://medpredict-eosin.vercel.app)**
 
-🎬 [Assistir à demonstração](https://medpredict-eosin.vercel.app/demo/medpredict-demo-final-v3.mp4)
+🎬 **[Assistir à demonstração](https://medpredict-eosin.vercel.app/demo/medpredict-demo-final-v3.mp4)**
 
-### Protótipo desenvolvido por Nely
+### Protótipo MedPredict — Nely
 
-Como parte do mesmo processo de aprendizagem e experimentação, **Nely** desenvolveu uma segunda proposta de aplicação do MedPredict utilizando o Manus.
+Este protótipo foi desenvolvido por **Nely** como parte do projeto acadêmico **MedPredict**, do Grupo TRAMA.
 
-A solução representa outra abordagem para transformar a proposta do projeto em uma experiência prática, mantendo a mesma finalidade de apoiar o enfrentamento do No-Show.
+A proposta representa uma segunda abordagem de implementação da solução, desenvolvida durante o processo de aprendizagem e experimentação do projeto.
 
-🌐 [Acessar o protótipo desenvolvido por Nely](https://medpredict-zanacnc9.manus.space)
+Assim como o protótipo navegável integrado desenvolvido por Tatiana Araujo, esta solução tem como objetivo transformar os resultados da análise e do Machine Learning em uma experiência prática que possa apoiar o enfrentamento do No-Show.
+
+#### 🌐 Acessar o protótipo
+
+🔗 **[Abrir protótipo desenvolvido por Nely](https://medpredict-zanacnc9.manus.space)**
+
+#### 🎬 Demonstração apresentada no TCC
+
+Além do protótipo publicado no Manus, **Nely também preparou a demonstração utilizada durante a apresentação do projeto MedPredict**.
+
+A demo apresenta a proposta de funcionamento da solução construída por ela e representa uma das formas exploradas pelo Grupo TRAMA para transformar os resultados do projeto em uma aplicação prática.
+
+▶️ **[Assistir à demonstração preparada por Nely](prototipo/prototipo-nely/demo/medpredict-demo-nely.mp4)**
+
+#### 🛠️ Desenvolvimento
+
+- **Autoria do protótipo:** Nely
+- **Autoria da demonstração:** Nely
+- **Plataforma utilizada:** Manus
+- **Projeto acadêmico:** MedPredict
+- **Grupo:** TRAMA
+- **Formação:** Mulheres in Tech 2026
 
 > Os protótipos representam diferentes abordagens de implementação desenvolvidas durante o processo de aprendizagem do Grupo TRAMA.
 
@@ -217,7 +240,6 @@ No contexto do MedPredict, essa característica é especialmente importante porq
 
 O modelo deve ser utilizado como ferramenta de apoio à priorização, mantendo as decisões e os contatos com pacientes sob responsabilidade humana.
 
-
 ---
 
 ## 🧪 Validação cruzada
@@ -329,6 +351,7 @@ medpredict/
 │   └── README.md
 │
 ├── prototipo/
+│   │
 │   ├── demo/
 │   │   ├── output/
 │   │   │   ├── README.md
@@ -339,6 +362,9 @@ medpredict/
 │   │   └── README.md
 │   │
 │   ├── prototipo-nely/
+│   │   ├── demo/
+│   │   │   ├── README.md
+│   │   │   └── medpredict-demo-nely.mp4
 │   │   └── README.md
 │   │
 │   ├── public/
@@ -351,10 +377,15 @@ medpredict/
 │   │
 │   ├── server/
 │   ├── src/
+│   │
+│   ├── .medpredict-demo-state.json
 │   ├── README.md
 │   ├── index.html
 │   ├── package.json
-│   └── package-lock.json
+│   ├── package-lock.json
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   └── tsconfig.node.json
 │
 ├── .gitignore
 ├── README.md
