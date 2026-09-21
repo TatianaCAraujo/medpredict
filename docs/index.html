@@ -212,6 +212,56 @@
       font-weight: bold;
     }
 
+    .team-story {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-top: 28px;
+      padding: 24px;
+      background: #f7f9fb;
+      border: 1px solid #d8e2ec;
+      border-radius: 16px;
+    }
+
+    .team-story-image {
+      flex: 0 0 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .team-story-image img {
+      width: 190px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .team-story-text {
+      flex: 1;
+    }
+
+    .team-story-text h3 {
+      margin: 0 0 10px;
+      color: #244b6b;
+    }
+
+    .team-story-text p {
+      margin: 0 0 10px;
+      color: #475569;
+      line-height: 1.7;
+    }
+
+    .team-story-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .frase-trama {
+      font-weight: bold;
+      color: #244b6b !important;
+    }
+
     .github {
       margin-top: 26px;
     }
@@ -241,6 +291,21 @@
 
       .membro {
         width: 100%;
+      }
+
+      .team-story {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .team-story-image {
+        flex: none;
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .team-story-image img {
+        width: 160px;
       }
     }
   </style>
@@ -466,6 +531,40 @@
             <span class="linkedin">in</span>
             Tatiana Araujo
           </a>
+
+        </div>
+
+        <div class="team-story">
+
+          <div class="team-story-image">
+
+            <img
+              src="logo_trama.png"
+              alt="Logo do Grupo TRAMA"
+            >
+
+          </div>
+
+          <div class="team-story-text">
+
+            <h3>Por que TRAMA?</h3>
+
+            <p>
+              O nome <strong>TRAMA</strong> representa a união de trajetórias,
+              ideias e habilidades diferentes que se entrelaçaram na construção
+              do <strong>MedPredict</strong>.
+            </p>
+
+            <p>
+              Assim como uma trama é formada por vários fios, o projeto foi
+              construído pela contribuição de cada integrante do grupo.
+            </p>
+
+            <p class="frase-trama">
+              Seis trajetórias, uma trama.
+            </p>
+
+          </div>
 
         </div>
 
