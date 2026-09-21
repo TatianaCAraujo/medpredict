@@ -10,23 +10,23 @@
 
 ## 🚀 Acesse o MedPredict
 
-O MedPredict possui **duas propostas de protótipo**, desenvolvidas durante o processo de aprendizagem do Grupo TRAMA e apresentadas no TCC.
+O MedPredict possui **dois MVPs**, desenvolvidos durante o processo de aprendizagem do Grupo TRAMA e apresentados no TCC.
 
-🚀 **[Conhecer os protótipos e demos apresentados no TCC](https://tatianacaraujo.github.io/medpredict/)**
+🚀 **[Conhecer os MVPs e demos apresentados no TCC](https://tatianacaraujo.github.io/medpredict/)**
 
-### Protótipo — Tatiana Araujo
+### MVP — Tatiana Araujo
 
 🌐 **[Acessar o MVP](https://medpredict-eosin.vercel.app)**
 
 🎬 **[Assistir à demonstração apresentada no TCC](https://medpredict-eosin.vercel.app/demo/medpredict-demo-final-v3.mp4)**
 
-### Protótipo — Nely
+### MVP — Nely Eliane Silva
 
-🌐 **[Acessar o protótipo no Manus](https://medpredict-zanacnc9.manus.space)**
+🌐 **[Acessar o MVP](https://medpredict-zanacnc9.manus.space)**
 
 🎬 **[Assistir à demonstração apresentada no TCC](https://tatianacaraujo.github.io/medpredict/demo-nely/)**
 
-> Os protótipos representam diferentes abordagens de implementação desenvolvidas a partir do mesmo projeto de análise e Machine Learning para apoio ao enfrentamento do No-Show.
+> Os dois MVPs representam diferentes formas de transformar o mesmo projeto de análise e Machine Learning em aplicações práticas de apoio ao enfrentamento do No-Show.
 
 ---
 
@@ -34,65 +34,72 @@ O MedPredict possui **duas propostas de protótipo**, desenvolvidas durante o pr
 
 O **MedPredict** foi desenvolvido como Trabalho de Conclusão de Curso pela equipe **Grupo TRAMA**, formada por:
 
-- Camila
-- Jacqueline
-- Nely
-- Renata
-- Suzanne
-- Tatiana
+- [Camila Lima](https://www.linkedin.com/in/camilamlima)
+- [Jacqueline Rodrigues](https://www.linkedin.com/in/jacqueline-leal)
+- [Nely Eliane Silva](https://www.linkedin.com/in/nelyelianesilva)
+- [Renata Barbosa](https://www.linkedin.com/in/renataalvesbarbosa)
+- [Suzane Cruz](https://www.linkedin.com/in/suzanecruz)
+- [Tatiana Araujo](https://www.linkedin.com/in/tatianacristinadearaujo/)
 
 O projeto foi construído de forma colaborativa, envolvendo pesquisa, análise de dados, exploração de hipóteses, Machine Learning, documentação, apresentação, definição da solução e experimentação de diferentes formas de transformar os resultados em aplicações práticas.
 
+### 🧵 Por que TRAMA?
+
+<p align="left">
+  <img src="docs/logo_trama.png" alt="Logo do Grupo TRAMA" width="220">
+</p>
+
+O nome **TRAMA** representa a união de trajetórias, ideias e habilidades diferentes que se entrelaçaram na construção do **MedPredict**.
+
+Assim como uma trama é formada por vários fios, o projeto foi construído pela contribuição de cada integrante do grupo.
+
+**Seis trajetórias, uma trama.**
+
 ---
 
-## 🧩 Protótipos desenvolvidos
+## 🧩 MVPs desenvolvidos
 
 Durante o desenvolvimento do MedPredict, também exploramos diferentes formas de transformar os resultados do projeto em aplicações práticas.
 
-As duas propostas foram desenvolvidas com a mesma finalidade: aproximar os resultados da análise e do Machine Learning de uma solução que pudesse apoiar o enfrentamento do No-Show.
+Os dois MVPs foram desenvolvidos com a mesma finalidade: aproximar os resultados da análise e do Machine Learning de uma solução que pudesse apoiar o enfrentamento do No-Show.
 
-### Protótipo navegável — Tatiana Araujo
+### MVP — Tatiana Araujo
 
-A **ideia, concepção e desenvolvimento completo do protótipo navegável integrado do MedPredict** foram realizados por **Tatiana Araujo**.
+A **ideia, concepção e desenvolvimento completo do MVP navegável integrado do MedPredict** foram realizados por **Tatiana Araujo**.
 
 A solução apresenta a jornada do paciente e da equipe administrativa, incluindo confirmação e cancelamento de consultas, estimativa de risco de No-Show, priorização de contatos, Agenda Inteligente e recuperação de vagas.
 
-O desenvolvimento desse protótipo fez parte do processo de aprendizagem do projeto e permitiu aplicar, na prática, conceitos de produto, experiência do usuário, desenvolvimento de soluções e integração com os resultados de Machine Learning.
+O desenvolvimento desse MVP fez parte do processo de aprendizagem do projeto e permitiu aplicar, na prática, conceitos de produto, experiência do usuário, desenvolvimento de soluções, qualidade de software e integração com os resultados de Machine Learning.
+
+#### 🛠️ Tecnologias e ferramentas
+
+- **Frontend:** React e TypeScript
+- **Build e desenvolvimento:** Vite
+- **Automação da demonstração:** Playwright
+- **Publicação do MVP:** Vercel
 
 🌐 **[Acessar o MVP](https://medpredict-eosin.vercel.app)**
 
-🎬 **[Assistir à demonstração](https://medpredict-eosin.vercel.app/demo/medpredict-demo-final-v3.mp4)**
+🎬 **[Assistir à demonstração apresentada no TCC](https://medpredict-eosin.vercel.app/demo/medpredict-demo-final-v3.mp4)**
 
-### Protótipo MedPredict — Nely
+### MVP — Nely Eliane Silva
 
-Este protótipo foi desenvolvido por **Nely** como parte do projeto acadêmico **MedPredict**, do Grupo TRAMA.
+O MVP do MedPredict foi desenvolvido por **Nely Eliane Silva** durante o processo de aprendizagem e experimentação do projeto.
 
-A proposta representa uma segunda abordagem de implementação da solução, desenvolvida durante o processo de aprendizagem e experimentação do projeto.
+A solução possui a mesma finalidade de transformar os resultados da análise e do Machine Learning em uma experiência prática que possa apoiar o enfrentamento do No-Show.
 
-Assim como o protótipo navegável integrado desenvolvido por Tatiana Araujo, esta solução tem como objetivo transformar os resultados da análise e do Machine Learning em uma experiência prática que possa apoiar o enfrentamento do No-Show.
+#### 🛠️ Tecnologias e ferramentas
 
-#### 🌐 Acessar o protótipo
+- **Desenvolvimento:** Manus
+- **Publicação do MVP:** Manus
+- **Autoria do MVP:** Nely Eliane Silva
+- **Autoria da demonstração:** Nely Eliane Silva
 
-🔗 **[Abrir protótipo desenvolvido por Nely](https://medpredict-zanacnc9.manus.space)**
+🌐 **[Acessar o MVP](https://medpredict-zanacnc9.manus.space)**
 
-#### 🎬 Demonstração apresentada no TCC
+🎬 **[Assistir à demonstração apresentada no TCC](https://tatianacaraujo.github.io/medpredict/demo-nely/)**
 
-Além do protótipo publicado no Manus, **Nely também preparou a demonstração utilizada durante a apresentação do projeto MedPredict**.
-
-A demo apresenta a proposta de funcionamento da solução construída por ela e representa uma das formas exploradas pelo Grupo TRAMA para transformar os resultados do projeto em uma aplicação prática.
-
-▶️ **[Assistir à demonstração preparada por Nely](https://tatianacaraujo.github.io/medpredict/demo-nely/)**
-
-#### 🛠️ Desenvolvimento
-
-- **Autoria do protótipo:** Nely
-- **Autoria da demonstração:** Nely
-- **Plataforma utilizada:** Manus
-- **Projeto acadêmico:** MedPredict
-- **Grupo:** TRAMA
-- **Formação:** Mulheres in Tech 2026
-
-> Os protótipos representam diferentes abordagens de implementação desenvolvidas durante o processo de aprendizagem do Grupo TRAMA.
+> Os dois MVPs foram apresentados durante o TCC e representam diferentes experiências de implementação desenvolvidas a partir do mesmo projeto do Grupo TRAMA.
 
 ---
 
@@ -106,7 +113,7 @@ A proposta não é determinar quem irá faltar, mas utilizar o risco estimado pe
 
 As decisões e os contatos com pacientes permanecem sob responsabilidade humana.
 
-Além da análise preditiva, o projeto contempla uma segunda frente voltada à experiência do paciente, por meio de um MVP para gerenciamento dos próprios agendamentos.
+Além da análise preditiva, o projeto contempla uma segunda frente voltada à experiência do paciente, por meio de MVPs para gerenciamento dos próprios agendamentos.
 
 ---
 
@@ -282,7 +289,7 @@ Essas relações devem ser interpretadas como **associações encontradas nos da
 
 ---
 
-## 🖥️ Protótipo
+## 🖥️ Solução proposta
 
 O MedPredict possui duas frentes complementares.
 
@@ -298,7 +305,7 @@ A frente preditiva busca:
 
 ### Experiência do paciente
 
-O MVP propõe uma experiência centralizada para gerenciamento das consultas, permitindo ao paciente:
+Os MVPs exploram uma experiência centralizada para gerenciamento das consultas, permitindo ao paciente:
 
 - visualizar seus agendamentos;
 - confirmar consultas;
@@ -339,6 +346,13 @@ medpredict/
 ├── dados/
 │   ├── FONTE.md
 │   └── amostra_1000_linhas.csv
+│
+├── docs/
+│   ├── demo-nely/
+│   │   ├── index.html
+│   │   └── medpredict-demo-nely.mp4
+│   ├── index.html
+│   └── logo_trama.png
 │
 ├── imagens/
 │   └── imagens e recursos visuais do projeto
